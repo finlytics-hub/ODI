@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Predict Cricket ODI Outcome</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Cricket ODI Outcome</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+      <input type="text" name="country" placeholder="Country" required="required" /><br>
+    	<input type="text" name="opposition" placeholder="Opposition" required="required" /><br>
+        <input type="text" name="home/away" placeholder="Home/Away" required="required" /><br>
+        <input type="number" name="toss won?" placeholder="Toss Won?" required="required" /><br>
+        <input type="text" name="ground" placeholder="Ground" required="required" /><br>
+        <input type="number" name="win/loss ratio" placeholder="Win/Loss Ratio" required="required" step=".01"/><br>
+        <input type="number" name="match_month" placeholder="Match Month" required="required" /><br>
+        <input type="number" name="player 1 bowling rank" placeholder="Player 1 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 2 bowling rank" placeholder="Player 2 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 3 bowling rank" placeholder="Player 3 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 4 bowling rank" placeholder="Player 4 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 5 bowling rank" placeholder="Player 5 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 6 bowling rank" placeholder="Player 6 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 7 bowling rank" placeholder="Player 7 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 8 bowling rank" placeholder="Player 8 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 9 bowling rank" placeholder="Player 9 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 10 bowling rank" placeholder="Player 10 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 11 bowling rank" placeholder="Player 11 Bowling Rank" required="required" /><br>
+        <input type="number" name="player 1 batting rank" placeholder="Player 1 Batting Rank" required="required" /><br>
+        <input type="number" name="player 2 batting rank" placeholder="Player 2 Batting Rank" required="required" /><br>
+        <input type="number" name="player 3 batting rank" placeholder="Player 3 Batting Rank" required="required" /><br>
+        <input type="number" name="player 4 batting rank" placeholder="Player 4 Batting Rank" required="required" /><br>
+        <input type="number" name="player 5 batting rank" placeholder="Player 5 Batting Rank" required="required" /><br>
+        <input type="number" name="player 6 batting rank" placeholder="Player 6 Batting Rank" required="required" /><br>
+        <input type="number" name="player 7 batting rank" placeholder="Player 7 Batting Rank" required="required" /><br>
+        <input type="number" name="player 8 batting rank" placeholder="Player 8 Batting Rank" required="required" /><br>
+        <input type="number" name="player 9 batting rank" placeholder="Player 9 Batting Rank" required="required" /><br>
+        <input type="number" name="player 10 batting rank" placeholder="Player 10 Batting Rank" required="required" /><br>
+        <input type="number" name="player 11 batting rank" placeholder="Player 11 Batting Rank" required="required" /><br>
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{pred}}
+
+</body>
+</html>
