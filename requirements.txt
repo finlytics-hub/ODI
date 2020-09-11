@@ -1,5 +1,5 @@
 Flask==1.1.1
-sklearn==0.22.2
+scikit-learn==0.22.2
 pandas==1.0.5
 numpy==1.18.5
 python==3.6
