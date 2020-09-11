@@ -34,7 +34,7 @@ def predict_api():
     unseen_data = pd.DataFrame([data])
     unseen_data = pd.get_dummies(unseen_data, columns = ['Country', 'Opposition', 'Home/Away', 'Toss Won?', 'Ground'], drop_first = True)
     unseen_data = unseen_data.reindex(labels = columns_list, axis=1, fill_value=0)
-    result_prob = loaded_model.predict_proba(unseen_data)[: , 1]
+    result_prob = model.predict_proba(unseen_data)[: , 1]
     if result_prob > 0.5:
         result = 'Win'
     else:
