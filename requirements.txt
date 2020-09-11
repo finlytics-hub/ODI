@@ -1,6 +1,5 @@
-pycaret==2.1.2
 Flask==1.1.1
-Jinja2==2.10.1
-gunicorn==19.9.0
-certifi==2019.11.28
-itsdangerous==1.1.0
+sklearn==0.22.2
+pandas==1.0.5
+numpy==1.18.5
+python==3.6
