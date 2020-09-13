@@ -17,6 +17,7 @@ def home():
 @app.route('/predict',methods=['POST'])
 def predict():
     int_features = [x for x in request.form.values()]
+    country = request.form['element_2']
     final = np.array(int_features)
     unseen_data = pd.DataFrame([final], columns = cols)
     unseen_data = pd.get_dummies(unseen_data, columns = ['Country', 'Opposition', 'Home/Away', 'Toss Won?', 'Ground'], drop_first = True)
@@ -26,7 +27,7 @@ def predict():
         result = 'Win'
     else:
         result = 'Lose'
-    return render_template('result.html', pred='Country is expected to {}'.format(result))
+    return render_template('result.html', pred=f'{country} is expected to {result}!')
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
