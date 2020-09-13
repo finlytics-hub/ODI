@@ -2,7 +2,6 @@ from flask import Flask, request, url_for, redirect, render_template, jsonify
 from sklearn.linear_model import LogisticRegression
 import pandas as pd
 import pickle
-import numpy as np
 
 app = Flask(__name__)
 
