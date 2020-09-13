@@ -26,7 +26,7 @@ def predict():
         result = 'Win'
     else:
         result = 'Lose'
-    return render_template('home.html', pred='Country is expected to {}'.format(result))
+    return render_template('result.html', pred='Country is expected to {}'.format(result))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
