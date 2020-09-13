@@ -3,24 +3,29 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cricket ODI Matches Prediction</title>
-<link type="text/css" rel="stylesheet" href="style.css">
 <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
 
 </head>
 <body id="main_body" >
 	
-	<img id="top" src="top.png" alt="">
-	<div id="form_container">
+<img id="top" src="top.png" alt="">
+<div id="form_container">
 	
-		<h1><a>Cricket ODI Matches Prediction</a></h1>
-		<form class="appnitro"  method="POST" action="{{ url_for('predict')}}">
-					<div class="form_description">
-			<center><h2>Cricket ODI Matches Prediction</h2></center>
-			<p>Enter the following information</p>
-		</div>						
+<h1><a>Cricket ODI Matches Prediction</a></h1>
+<form class="appnitro"  method="POST" action="{{ url_for('predict')}}">
+	<div class="form_description">
+			<center><h2>Cricket ODI Match Prediction</h2></center>
+			<br>
+			<p>Please enter all the following information in order to predict the match outcome:</p>
+	</div>						
 
 <div style=" text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
 <table width="100%" border="1" cellpadding="2" cellspacing="2" style="background-color: #ffffff;">
+<tr>
+<th colspan="2" style="border-width : 0px;">
+<center><p>Match Details</p></center>
+</th>
+</tr>
 <tr valign="top">
 <td style="border-width : 0px;"><br />
  		<li id="li_2" >
@@ -224,7 +229,7 @@
 			 <option>Wellington</option>
 			 <option>Others</option>
 		</select>
-		</div><p class="guidelines" id="guide_52"><small>Select the name of the ground where the match will be played</small></p> 
+		</div><p class="guidelines" id="guide_52"><small>Select the name of the ground where the match will be played. Select 'Others' if the ground is not listed</small></p> 
 		</li>
 </td>
 
@@ -253,9 +258,10 @@
 </tr>
 
 <tr valign="top">
-<td style="border-width : 0px;"><br />
+<td colspan="2" style="border-width : 0px;"><br />
 		<li id="li_3" >
 		<label class="description" for="element_3">Win/Loss Ratio </label>
+		Find the latest win/loss ratio of your team from <a href="https://stats.espncricinfo.com/ci/engine/stats/index.html?class=2;template=results;type=team" target="_blank">here</a>
 		<div>
 		<input id="element_3" name="element_3" class="element text large" type="number" step=".01" required="required" value=""/> 
 		</div><p class="guidelines" id="guide_3"><small>Enter the latest win/loss ratio for your subject country</small></p> 
@@ -267,13 +273,19 @@
 
 <div style=" text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
 <table width="100%" border="1" cellpadding="2" cellspacing="2" style="background-color: #ffffff;">
+<tr>
+<th colspan="2" style="border-width : 0px;">
+<center><p>Your Team's ICC ODI Bowling Ranks (found <a href="http://www.relianceiccrankings.com/ranking/odi/bowling/" target="_blank">here</a>)</p></center>
+<p style="font-weight: normal; font-size:95%; line-height:130%; margin:0 0 12px;">Enter the latest ICC ODI Bowling Rankings of all your team's players here. In case a player is not in the top 100 ranking, then enter <strong>101</strong> for that player.</p>
+</th>
+</tr>
 <tr valign="top">
 <td style="border-width : 0px;"><br />
 		<li id="li_4" >
 		<label class="description" for="element_4">Player 1 Bowling Rank </label>
 		<div>
 		<input id="element_4" name="element_4" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_4"><small>Enter the ICC ODI Bowling Rank for your team's 1st player</small></p> 
+		</div><p class="guidelines" id="guide_4"><small>Enter the ICC ODI Bowling Rank for your team's 1st player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -282,7 +294,7 @@
 		<label class="description" for="element_5">Player 2 Bowling Rank </label>
 		<div>
 		<input id="element_5" name="element_5" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_5"><small>Enter the ICC ODI Bowling Rank for your team's 2nd player</small></p> 
+		</div><p class="guidelines" id="guide_5"><small>Enter the ICC ODI Bowling Rank for your team's 2nd player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -293,7 +305,7 @@
 		<label class="description" for="element_6">Player 3 Bowling Rank </label>
 		<div>
 		<input id="element_6" name="element_6" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_6"><small>Enter the ICC ODI Bowling Rank for your team's 3rd player</small></p> 
+		</div><p class="guidelines" id="guide_6"><small>Enter the ICC ODI Bowling Rank for your team's 3rd player (101 if outside top 100)</small></p> 
 		</li>		
 </td>
 
@@ -302,7 +314,7 @@
 		<label class="description" for="element_7">Player 4 Bowling Rank </label>
 		<div>
 		<input id="element_7" name="element_7" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_7"><small>Enter the ICC ODI Bowling Rank for your team's 4th player</small></p> 
+		</div><p class="guidelines" id="guide_7"><small>Enter the ICC ODI Bowling Rank for your team's 4th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -313,7 +325,7 @@
 		<label class="description" for="element_8">Player 5 Bowling Rank </label>
 		<div>
 		<input id="element_8" name="element_8" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_8"><small>Enter the ICC ODI Bowling Rank for your team's 5th player</small></p> 
+		</div><p class="guidelines" id="guide_8"><small>Enter the ICC ODI Bowling Rank for your team's 5th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -322,7 +334,7 @@
 		<label class="description" for="element_9">Player 6 Bowling Rank </label>
 		<div>
 		<input id="element_9" name="element_9" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_9"><small>Enter the ICC ODI Bowling Rank for your team's 6th player</small></p> 
+		</div><p class="guidelines" id="guide_9"><small>Enter the ICC ODI Bowling Rank for your team's 6th player (101 if outside top 100)</small></p> 
 		</li>		
 </td>
 </tr>
@@ -333,7 +345,7 @@
 		<label class="description" for="element_10">Player 7 Bowling Rank </label>
 		<div>
 		<input id="element_10" name="element_10" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_10"><small>Enter the ICC ODI Bowling Rank for your team's 7th player</small></p> 
+		</div><p class="guidelines" id="guide_10"><small>Enter the ICC ODI Bowling Rank for your team's 7th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -342,7 +354,7 @@
 		<label class="description" for="element_11">Player 8 Bowling Rank </label>
 		<div>
 		<input id="element_11" name="element_11" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_11"><small>Enter the ICC ODI Bowling Rank for your team's 8th player</small></p> 
+		</div><p class="guidelines" id="guide_11"><small>Enter the ICC ODI Bowling Rank for your team's 8th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -352,7 +364,7 @@
 		<label class="description" for="element_12">Player 9 Bowling Rank </label>
 		<div>
 		<input id="element_12" name="element_12" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_12"><small>Enter the ICC ODI Bowling Rank for your team's 9th player</small></p> 
+		</div><p class="guidelines" id="guide_12"><small>Enter the ICC ODI Bowling Rank for your team's 9th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -361,7 +373,7 @@
 		<label class="description" for="element_13">Player 10 Bowling Rank </label>
 		<div>
 		<input id="element_13" name="element_13" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_13"><small>Enter the ICC ODI Bowling Rank for your team's 10th player</small></p> 
+		</div><p class="guidelines" id="guide_13"><small>Enter the ICC ODI Bowling Rank for your team's 10th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -372,7 +384,7 @@
 		<label class="description" for="element_14">Player 11 Bowling Rank </label>
 		<div>
 		<input id="element_14" name="element_14" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_14"><small>Enter the ICC ODI Bowling Rank for your team's 11th player</small></p> 
+		</div><p class="guidelines" id="guide_14"><small>Enter the ICC ODI Bowling Rank for your team's 11th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -381,13 +393,19 @@
 
 <div style=" text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
 <table width="100%" border="1" cellpadding="2" cellspacing="2" style="background-color: #ffffff;">
+<tr>
+<th colspan="2" style="border-width : 0px;">
+<center><p>Opposition Team's ICC ODI Bowling Ranks (found <a href="http://www.relianceiccrankings.com/ranking/odi/bowling/" target="_blank">here</a>)</p></center>
+<p style="font-weight: normal; font-size:95%; line-height:130%; margin:0 0 12px;">Enter the latest ICC ODI Bowling Rankings of all the opposition team's players here. In case a player is not in the top 100 ranking, then enter <strong>101</strong> for that player.</p>
+</th>
+</tr>
 <tr valign="top">
 <td style="border-width : 0px;"><br />
 		<li id="li_15" >
 		<label class="description" for="element_15">Opposition Player 1 Bowling Rank </label>
 		<div>
 		<input id="element_15" name="element_15" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_15"><small>Enter the ICC ODI Bowling Rank for the opposition team's 1st player</small></p> 
+		</div><p class="guidelines" id="guide_15"><small>Enter the ICC ODI Bowling Rank for the opposition team's 1st player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -396,7 +414,7 @@
 		<label class="description" for="element_16">Opposition Player 2 Bowling Rank </label>
 		<div>
 		<input id="element_16" name="element_16" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_16"><small>Enter the ICC ODI Bowling Rank for the opposition team's 2nd player</small></p> 
+		</div><p class="guidelines" id="guide_16"><small>Enter the ICC ODI Bowling Rank for the opposition team's 2nd player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -407,7 +425,7 @@
 		<label class="description" for="element_17">Opposition Player 3 Bowling Rank </label>
 		<div>
 		<input id="element_17" name="element_17" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_17"><small>Enter the ICC ODI Bowling Rank for the opposition team's 3rd player</small></p> 
+		</div><p class="guidelines" id="guide_17"><small>Enter the ICC ODI Bowling Rank for the opposition team's 3rd player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -416,7 +434,7 @@
 		<label class="description" for="element_18">Opposition Player 4 Bowling Rank </label>
 		<div>
 		<input id="element_18" name="element_18" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_18"><small>Enter the ICC ODI Bowling Rank for the opposition team's 4th player</small></p> 
+		</div><p class="guidelines" id="guide_18"><small>Enter the ICC ODI Bowling Rank for the opposition team's 4th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -427,7 +445,7 @@
 		<label class="description" for="element_19">Opposition Player 5 Bowling Rank </label>
 		<div>
 		<input id="element_19" name="element_19" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_19"><small>Enter the ICC ODI Bowling Rank for the opposition team's 5th player</small></p> 
+		</div><p class="guidelines" id="guide_19"><small>Enter the ICC ODI Bowling Rank for the opposition team's 5th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -436,7 +454,7 @@
 		<label class="description" for="element_20">Opposition Player 6 Bowling Rank </label>
 		<div>
 		<input id="element_20" name="element_20" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_20"><small>Enter the ICC ODI Bowling Rank for the opposition team's 6th player</small></p> 
+		</div><p class="guidelines" id="guide_20"><small>Enter the ICC ODI Bowling Rank for the opposition team's 6th player (101 if outside top 100)</small></p> 
 		</li>		
 </td>
 </tr>
@@ -447,7 +465,7 @@
 		<label class="description" for="element_21">Opposition Player 7 Bowling Rank </label>
 		<div>
 		<input id="element_21" name="element_21" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_21"><small>Enter the ICC ODI Bowling Rank for the opposition team's 7th player</small></p> 
+		</div><p class="guidelines" id="guide_21"><small>Enter the ICC ODI Bowling Rank for the opposition team's 7th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -456,7 +474,7 @@
 		<label class="description" for="element_22">Opposition Player 8 Bowling Rank </label>
 		<div>
 		<input id="element_22" name="element_22" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_22"><small>Enter the ICC ODI Bowling Rank for the opposition team's 8th player</small></p> 
+		</div><p class="guidelines" id="guide_22"><small>Enter the ICC ODI Bowling Rank for the opposition team's 8th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -467,7 +485,7 @@
 		<label class="description" for="element_23">Opposition Player 9 Bowling Rank </label>
 		<div>
 		<input id="element_23" name="element_23" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_23"><small>Enter the ICC ODI Bowling Rank for the opposition team's 9th player</small></p> 
+		</div><p class="guidelines" id="guide_23"><small>Enter the ICC ODI Bowling Rank for the opposition team's 9th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -476,7 +494,7 @@
 		<label class="description" for="element_24">Opposition Player 10 Bowling Rank </label>
 		<div>
 		<input id="element_24" name="element_24" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_24"><small>Enter the ICC ODI Bowling Rank for the opposition team's 10th player</small></p> 
+		</div><p class="guidelines" id="guide_24"><small>Enter the ICC ODI Bowling Rank for the opposition team's 10th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -487,7 +505,7 @@
 		<label class="description" for="element_25">Opposition Player 11 Bowling Rank </label>
 		<div>
 		<input id="element_25" name="element_25" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_25"><small>Enter the ICC ODI Bowling Rank for the opposition team's 11th player</small></p> 
+		</div><p class="guidelines" id="guide_25"><small>Enter the ICC ODI Bowling Rank for the opposition team's 11th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -496,13 +514,19 @@
 
 <div style=" text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
 <table width="100%" border="1" cellpadding="2" cellspacing="2" style="background-color: #ffffff;">
+<tr>
+<th colspan="2" style="border-width : 0px;">
+<center><p>Your Team's ICC ODI Batting Ranks (found <a href="http://www.relianceiccrankings.com/ranking/odi/batting/" target="_blank">here</a>)</p></center>
+<p style="font-weight: normal; font-size:95%; line-height:130%; margin:0 0 12px;">Enter the latest ICC ODI Batting Rankings of all your team's players here. In case a player is not in the top 100 ranking, then enter <strong>101</strong> for that player.</p>
+</th>
+</tr>
 <tr valign="top">
 <td style="border-width : 0px;"><br />
 		<li id="li_26" >
 		<label class="description" for="element_26">Player 1 Batting Rank </label>
 		<div>
 		<input id="element_26" name="element_26" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_26"><small>Enter the ICC ODI Batting Rank for your team's 1st player</small></p> 
+		</div><p class="guidelines" id="guide_26"><small>Enter the ICC ODI Batting Rank for your team's 1st player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -511,7 +535,7 @@
 		<label class="description" for="element_27">Player 2 Batting Rank </label>
 		<div>
 		<input id="element_27" name="element_27" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_27"><small>Enter the ICC ODI Batting Rank for your team's 2nd player</small></p> 
+		</div><p class="guidelines" id="guide_27"><small>Enter the ICC ODI Batting Rank for your team's 2nd player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -522,7 +546,7 @@
 		<label class="description" for="element_28">Player 3 Batting Rank </label>
 		<div>
 		<input id="element_28" name="element_28" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_28"><small>Enter the ICC ODI Batting Rank for your team's 3rd player</small></p> 
+		</div><p class="guidelines" id="guide_28"><small>Enter the ICC ODI Batting Rank for your team's 3rd player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -531,7 +555,7 @@
 		<label class="description" for="element_29">Player 4 Batting Rank </label>
 		<div>
 		<input id="element_29" name="element_29" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_29"><small>Enter the ICC ODI Batting Rank for your team's 4th player</small></p> 
+		</div><p class="guidelines" id="guide_29"><small>Enter the ICC ODI Batting Rank for your team's 4th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -542,7 +566,7 @@
 		<label class="description" for="element_30">Player 5 Batting Rank </label>
 		<div>
 		<input id="element_30" name="element_30" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_30"><small>Enter the ICC ODI Batting Rank for your team's 5th player</small></p> 
+		</div><p class="guidelines" id="guide_30"><small>Enter the ICC ODI Batting Rank for your team's 5th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -551,7 +575,7 @@
 		<label class="description" for="element_31">Player 6 Batting Rank </label>
 		<div>
 		<input id="element_31" name="element_31" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_31"><small>Enter the ICC ODI Batting Rank for your team's 6th player</small></p> 
+		</div><p class="guidelines" id="guide_31"><small>Enter the ICC ODI Batting Rank for your team's 6th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -562,7 +586,7 @@
 		<label class="description" for="element_32">Player 7 Batting Rank </label>
 		<div>
 		<input id="element_32" name="element_32" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_32"><small>Enter the ICC ODI Batting Rank for your team's 7th player</small></p> 
+		</div><p class="guidelines" id="guide_32"><small>Enter the ICC ODI Batting Rank for your team's 7th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -571,7 +595,7 @@
 		<label class="description" for="element_33">Player 8 Batting Rank </label>
 		<div>
 		<input id="element_33" name="element_33" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_33"><small>Enter the ICC ODI Batting Rank for your team's 8th player</small></p> 
+		</div><p class="guidelines" id="guide_33"><small>Enter the ICC ODI Batting Rank for your team's 8th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -582,7 +606,7 @@
 		<label class="description" for="element_34">Player 9 Batting Rank </label>
 		<div>
 		<input id="element_34" name="element_34" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_34"><small>Enter the ICC ODI Batting Rank for your team's 9th player</small></p> 
+		</div><p class="guidelines" id="guide_34"><small>Enter the ICC ODI Batting Rank for your team's 9th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -591,7 +615,7 @@
 		<label class="description" for="element_35">Player 10 Batting Rank </label>
 		<div>
 		<input id="element_35" name="element_35" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_35"><small>Enter the ICC ODI Batting Rank for your team's 10th player</small></p> 
+		</div><p class="guidelines" id="guide_35"><small>Enter the ICC ODI Batting Rank for your team's 10th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -602,7 +626,7 @@
 		<label class="description" for="element_36">Player 11 Batting Rank </label>
 		<div>
 		<input id="element_36" name="element_36" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_36"><small>Enter the ICC ODI Batting Rank for your team's 11th player</small></p> 
+		</div><p class="guidelines" id="guide_36"><small>Enter the ICC ODI Batting Rank for your team's 11th player (101 if outside top 100)</small></p> 
 		</li>		
 </td>
 </tr>
@@ -611,13 +635,19 @@
 
 <div style=" text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 0px 0px;">
 <table width="100%" border="1" cellpadding="2" cellspacing="2" style="background-color: #ffffff;">
+<tr>
+<th colspan="2" style="border-width : 0px;">
+<center><p>Opposition Team's ICC ODI Batting Ranks (found <a href="http://www.relianceiccrankings.com/ranking/odi/batting/" target="_blank">here</a>)</p></center>
+<p style="font-weight: normal; font-size:95%; line-height:130%; margin:0 0 12px;">Enter the latest ICC ODI Batting Rankings of all the opposition team's players here. In case a player is not in the top 100 ranking, then enter <strong>101</strong> for that player.</p>
+</th>
+</tr>
 <tr valign="top">
 <td style="border-width : 0px;"><br />
 		<li id="li_37" >
 		<label class="description" for="element_37">Opposition Player 1 Batting Rank </label>
 		<div>
 		<input id="element_37" name="element_37" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_37"><small>Enter the ICC ODI Batting Rank for the opposition team's 1st player</small></p> 
+		</div><p class="guidelines" id="guide_37"><small>Enter the ICC ODI Batting Rank for the opposition team's 1st player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -626,7 +656,7 @@
 		<label class="description" for="element_38">Opposition Player 2 Batting Rank </label>
 		<div>
 		<input id="element_38" name="element_38" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_38"><small>Enter the ICC ODI Batting Rank for the opposition team's 2nd player</small></p> 
+		</div><p class="guidelines" id="guide_38"><small>Enter the ICC ODI Batting Rank for the opposition team's 2nd player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -637,7 +667,7 @@
 		<label class="description" for="element_39">Opposition Player 3 Batting Rank </label>
 		<div>
 		<input id="element_39" name="element_39" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_39"><small>Enter the ICC ODI Batting Rank for the opposition team's 3rd player</small></p> 
+		</div><p class="guidelines" id="guide_39"><small>Enter the ICC ODI Batting Rank for the opposition team's 3rd player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -646,7 +676,7 @@
 		<label class="description" for="element_40">Opposition Player 4 Batting Rank </label>
 		<div>
 		<input id="element_40" name="element_40" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_40"><small>Enter the ICC ODI Batting Rank for the opposition team's 4th player</small></p> 
+		</div><p class="guidelines" id="guide_40"><small>Enter the ICC ODI Batting Rank for the opposition team's 4th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -657,7 +687,7 @@
 		<label class="description" for="element_41">Opposition Player 5 Batting Rank </label>
 		<div>
 		<input id="element_41" name="element_41" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_41"><small>Enter the ICC ODI Batting Rank for the opposition team's 5th player</small></p> 
+		</div><p class="guidelines" id="guide_41"><small>Enter the ICC ODI Batting Rank for the opposition team's 5th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -666,7 +696,7 @@
 		<label class="description" for="element_42">Opposition Player 6 Batting Rank </label>
 		<div>
 		<input id="element_42" name="element_42" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_42"><small>Enter the ICC ODI Batting Rank for the opposition team's 6th player</small></p> 
+		</div><p class="guidelines" id="guide_42"><small>Enter the ICC ODI Batting Rank for the opposition team's 6th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -677,7 +707,7 @@
 		<label class="description" for="element_43">Opposition Player 7 Batting Rank </label>
 		<div>
 		<input id="element_43" name="element_43" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_43"><small>Enter the ICC ODI Batting Rank for the opposition team's 7th player</small></p> 
+		</div><p class="guidelines" id="guide_43"><small>Enter the ICC ODI Batting Rank for the opposition team's 7th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -686,7 +716,7 @@
 		<label class="description" for="element_44">Opposition Player 8 Batting Rank </label>
 		<div>
 		<input id="element_44" name="element_44" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_44"><small>Enter the ICC ODI Batting Rank for the opposition team's 8th player</small></p> 
+		</div><p class="guidelines" id="guide_44"><small>Enter the ICC ODI Batting Rank for the opposition team's 8th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -697,7 +727,7 @@
 		<label class="description" for="element_45">Opposition Player 9 Batting Rank </label>
 		<div>
 		<input id="element_45" name="element_45" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_45"><small>Enter the ICC ODI Batting Rank for the opposition team's 9th player</small></p> 
+		</div><p class="guidelines" id="guide_45"><small>Enter the ICC ODI Batting Rank for the opposition team's 9th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 
@@ -706,7 +736,7 @@
 		<label class="description" for="element_46">Opposition Player 10 Batting Rank </label>
 		<div>
 		<input id="element_46" name="element_46" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_46"><small>Enter the ICC ODI Batting Rank for the opposition team's 10th player</small></p> 
+		</div><p class="guidelines" id="guide_46"><small>Enter the ICC ODI Batting Rank for the opposition team's 10th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
@@ -717,24 +747,26 @@
 		<label class="description" for="element_47">Opposition Player 11 Batting Rank </label>
 		<div>
 		<input id="element_47" name="element_47" class="element text large" type="number" required="required" value=""/> 
-		</div><p class="guidelines" id="guide_47"><small>Enter the ICC ODI Batting Rank for the opposition team's 11th player</small></p> 
+		</div><p class="guidelines" id="guide_47"><small>Enter the ICC ODI Batting Rank for the opposition team's 11th player (101 if outside top 100)</small></p> 
 		</li>
 </td>
 </tr>
 </div>
 </table>
-			
-		<li class="buttons">
-        <button type="submit" class="button_text">Predict</button>
-		</li>
-			
+		
 
+<li class="buttons">
+<button type="submit" class="button_text" style="margin:0 75%">Predict</button>
+</li>
+			
+</form>	
 
-		</form>	
-		<div id="footer">
-			Powered by <a href="https://www.finlyticshub.com" target="_blank">Finlytics Hub</a>
-		</div>
-	</div>
-	<img id="bottom" src="bottom.png" alt="">
-	</body>
+<br>
+<div id="footer">
+Powered by <a href="https://www.finlyticshub.com" target="_blank">Finlytics Hub</a>
+</div>
+
+</div>
+<img id="bottom" src="bottom.png" alt="">
+</body>
 </html>
