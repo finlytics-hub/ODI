@@ -30,18 +30,5 @@ def predict():
         result = 'Lose'
     return render_template('result.html', pred=f'{country} is expected to {result} with a win probability of {result_prob_float:.2f}%')
 
-@app.route('/predict_api',methods=['POST'])
-def predict_api():
-    data = request.get_json(force=True)
-    unseen_data = pd.DataFrame([data])
-    unseen_data = pd.get_dummies(unseen_data, columns = ['Country', 'Opposition', 'Home/Away', 'Toss Won?', 'Ground'], drop_first = True)
-    unseen_data = unseen_data.reindex(labels = columns_list, axis=1, fill_value=0)
-    result_prob = model.predict_proba(unseen_data)[: , 1]
-    if result_prob > 0.5:
-        result = 'Win'
-    else:
-        result = 'Lose'
-    return jsonify(result)
-
 if __name__ == '__main__':
     app.run(debug=True)
