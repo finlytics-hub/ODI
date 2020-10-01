@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Cricket ODI Matches Prediction</title>
-<link type="text/css" rel="stylesheet" href="style.css">
 <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
 
 </head>
@@ -89,171 +88,50 @@
 		</div><p class="guidelines" id="guide_50"><small>Is it a home match or an away match</small></p> 
 		</li>		
 </td>
+</tr>
 
+<tr>
+<th colspan="2" style="border-width : 0px;">
+<center><p>Country Aggregates</p></center>
+<p style="font-weight: normal; font-size:95%; line-height:130%; margin:0 0 12px;">Enter the latest following aggregate statistics for your country on which you want to predict the match outcome.</p>
+<p style="font-weight: normal; font-size:95%; line-height:130%; margin:0 0 12px;">All the required information can be obtained from <a href="https://stats.espncricinfo.com/ci/engine/stats/index.html?class=2;template=results;type=team" target="_blank">here</a>. Just make sure to change the <strong>Totals in terms of</strong> for the bowling average and RPO on the linked page.</p>
+</th>
+</tr>
+
+<tr valign="top">
 <td style="border-width : 0px;"><br />
-		<li id="li_51" >
-		<label class="description" for="element_51">Toss Won?</label>
+		<li id="li_99" >
+		<label class="description" for="element_99">Batting Average</label>
 		<div>
-		<select class="element select large" id="element_51" name="element_51" required="required"> 
-				<option value="" selected="selected"></option>
-				<option>Yes</option>
-				<option>No</option>
-		</select>
-		</div><p class="guidelines" id="guide_51"><small>Did your country win the toss?</small></p> 
+		<input id="element_99" name="element_99" class="element text large" type="number" step=".01" required="required" value=""/> 
+		</div><p class="guidelines" id="guide_99"><small>Enter the latest batting average for your subject country</small></p> 
+		</li>
+</td>
+<td style="border-width : 0px;"><br />
+		<li id="li_98" >
+		<label class="description" for="element_98">Batting RPO</label>
+		<div>
+		<input id="element_98" name="element_98" class="element text large" type="number" step=".01" required="required" value=""/> 
+		</div><p class="guidelines" id="guide_98"><small>Enter the latest batting RPO for your subject country</small></p> 
 		</li>
 </td>
 </tr>
 
 <tr valign="top">
 <td style="border-width : 0px;"><br />
-		<li id="li_52" >
-		<label class="description" for="element_52">Ground</label>
+		<li id="li_97" >
+		<label class="description" for="element_97">Bowling Average</label>
 		<div>
-		<select class="element select large" id="element_52" name="element_52" required="required"> 
-			 <option value="" selected="selected"></option>
-			 <option>Abu Dhabi</option>
-			 <option>Adelaide</option>
-			 <option>Ahmedabad</option>
-			 <option>Albion</option>
-			 <option>Amstelveen</option>
-			 <option>Auckland</option>
-			 <option>Basseterre</option>
-			 <option>Belfast</option>
-			 <option>Bengaluru</option>
-			 <option>Benoni</option>
-			 <option>Birmingham</option>
-			 <option>Bloemfontein</option>
-			 <option>Bogra</option>
-			 <option>Bridgetown</option>
-			 <option>Brisbane</option>
-			 <option>Bristol</option>
-			 <option>Bulawayo</option>
-			 <option>Canberra</option>
-			 <option>Cape Town</option>
-			 <option>Cardiff</option>
-			 <option>Centurion</option>
-			 <option>Chandigarh</option>
-			 <option>Chattogram</option>
-			 <option>Chennai</option>
-			 <option>Chester-le-Street</option>
-			 <option>Christchurch</option>
-			 <option>Colombo (PSS)</option>
-			 <option>Colombo (RPS)</option>
-			 <option>Colombo (SSC)</option>
-			 <option>Cuttack</option>
-			 <option>Dambulla</option>
-			 <option>Delhi</option>
-			 <option>Dhaka</option>
-			 <option>Dubai (DSC)</option>
-			 <option>Dublin</option>
-			 <option>Dublin (Malahide)</option>
-			 <option>Dunedin</option>
-			 <option>Durban</option>
-			 <option>East London</option>
-			 <option>Edinburgh</option>
-			 <option>Faisalabad</option>
-			 <option>Faridabad</option>
-			 <option>Fatullah</option>
-			 <option>Galle</option>
-			 <option>Georgetown</option>
-			 <option>Greater Noida</option>
-			 <option>Gros Islet</option>
-			 <option>Gujranwala</option>
-			 <option>Guwahati</option>
-			 <option>Gwalior</option>
-			 <option>Hambantota</option>
-			 <option>Hamilton</option>
-			 <option>Harare</option>
-			 <option>Hobart</option>
-			 <option>Hyderabad (Deccan)</option>
-			 <option>Hyderabad (Sind)</option>
-			 <option>Indore</option>
-			 <option>Jaipur</option>
-			 <option>Jamshedpur</option>
-			 <option>Johannesburg</option>
-			 <option>Kandy</option>
-			 <option>Kanpur</option>
-			 <option>Karachi</option>
-			 <option>Kimberley</option>
-			 <option>Kingston</option>
-			 <option>Kingstown</option>
-			 <option>Kochi</option>
-			 <option>Kolkata</option>
-			 <option>Kuala Lumpur</option>
-			 <option>Lahore</option>
-			 <option>Leeds</option>
-			 <option>Lord's</option>
-			 <option>Manchester</option>
-			 <option>Margao</option>
-			 <option>Melbourne</option>
-			 <option>Melbourne (Docklands)</option>
-			 <option>Mohali</option>
-			 <option>Mombasa</option>
-			 <option>Moratuwa</option>
-			 <option>Mount Maunganui</option>
-			 <option>Multan</option>
-			 <option>Mumbai</option>
-			 <option>Mumbai (BS)</option>
-			 <option>Nagpur</option>
-			 <option>Nairobi (Gym)</option>
-			 <option>Napier</option>
-			 <option>Nelson</option>
-			 <option>North Sound</option>
-			 <option>Nottingham</option>
-			 <option>Paarl</option>
-			 <option>Pallekele</option>
-			 <option>Perth</option>
-			 <option>Peshawar</option>
-			 <option>Port Elizabeth</option>
-			 <option>Port of Spain</option>
-			 <option>Potchefstroom</option>
-			 <option>Providence</option>
-			 <option>Pune</option>
-			 <option>Queenstown</option>
-			 <option>Rajkot</option>
-			 <option>Rawalpindi</option>
-			 <option>Rotterdam</option>
-			 <option>Sharjah</option>
-			 <option>Sialkot</option>
-			 <option>Singapore</option>
-			 <option>Southampton</option>
-			 <option>St George's</option>
-			 <option>St John's</option>
-			 <option>Sydney</option>
-			 <option>Tangier</option>
-			 <option>Taunton</option>
-			 <option>The Hague</option>
-			 <option>The Oval</option>
-			 <option>Toronto</option>
-			 <option>Vadodara</option>
-			 <option>Visakhapatnam</option>
-			 <option>Wellington</option>
-			 <option>Others</option>
-		</select>
-		</div><p class="guidelines" id="guide_52"><small>Select the name of the ground where the match will be played. Select 'Others' if the ground is not listed</small></p> 
+		<input id="element_97" name="element_97" class="element text large" type="number" step=".01" required="required" value=""/> 
+		</div><p class="guidelines" id="guide_97"><small>Enter the latest bowling average for your subject country</small></p> 
 		</li>
 </td>
-
 <td style="border-width : 0px;"><br />
-		<li id="li_49" >
-		<label class="description" for="element_49">Match Month (1-12) </label>
+		<li id="li_96" >
+		<label class="description" for="element_96">Bowling RPO</label>
 		<div>
-		<select class="element select large" id="element_49" name="element_49" required="required"> 
-			 <option value="" selected="selected"></option>
-			 <option>1</option>
-			 <option>2</option>
-			 <option>3</option>
-			 <option>4</option>
-			 <option>5</option>
-			 <option>6</option>
-			 <option>7</option>
-			 <option>8</option>
-			 <option>9</option>
-			 <option>10</option>
-			 <option>11</option>
-			 <option>12</option>
-		</select>
-		</div><p class="guidelines" id="guide_49"><small>Select the month in which the match is being played</small></p> 
+		<input id="element_96" name="element_96" class="element text large" type="number" step=".01" required="required" value=""/> 
+		</div><p class="guidelines" id="guide_96"><small>Enter the latest bowling RPO for your subject country</small></p> 
 		</li>
 </td>
 </tr>
@@ -262,7 +140,6 @@
 <td colspan="2" style="border-width : 0px;"><br />
 		<li id="li_3" >
 		<label class="description" for="element_3">Win/Loss Ratio </label>
-		Find the latest win/loss ratio of your team from <a href="https://stats.espncricinfo.com/ci/engine/stats/index.html?class=2;template=results;type=team" target="_blank">here</a>
 		<div>
 		<input id="element_3" name="element_3" class="element text large" type="number" step=".01" required="required" value=""/> 
 		</div><p class="guidelines" id="guide_3"><small>Enter the latest win/loss ratio for your subject country</small></p> 
