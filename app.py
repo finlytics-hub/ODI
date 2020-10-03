@@ -1,5 +1,5 @@
 # import all the required libraries
-from flask import Flask, request, url_for, redirect, render_template, jsonify
+from flask import Flask, request, url_for, render_template
 from sklearn.linear_model import LogisticRegression
 import pandas as pd
 import pickle
