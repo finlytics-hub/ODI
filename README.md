@@ -2,6 +2,7 @@
 [![GitHub forks](https://img.shields.io/github/forks/finlytics-hub/ODI)](https://github.com/finlytics-hub/ODI/network)
 [![GitHub stars](https://img.shields.io/github/stars/finlytics-hub/ODI)](https://github.com/finlytics-hub/ODI/stargazers)
 [![GitHub license](https://img.shields.io/github/license/finlytics-hub/ODI)](https://github.com/finlytics-hub/ODI/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Ffinlytics-hub%2FODI)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Ffinlytics-hub%2FODI)
 
 # ODI Predictions
 
