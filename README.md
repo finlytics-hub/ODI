@@ -1,3 +1,8 @@
+[![GitHub issues](https://img.shields.io/github/issues/finlytics-hub/ODI)](https://github.com/finlytics-hub/ODI/issues)
+[![GitHub forks](https://img.shields.io/github/forks/finlytics-hub/ODI)](https://github.com/finlytics-hub/ODI/network)
+[![GitHub stars](https://img.shields.io/github/stars/finlytics-hub/ODI)](https://github.com/finlytics-hub/ODI/stargazers)
+[![GitHub license](https://img.shields.io/github/license/finlytics-hub/ODI)](https://github.com/finlytics-hub/ODI/blob/master/LICENSE)
+
 # ODI Predictions
 
 An end-to-end data science journey of data collection, web scraping, data cleaning, feature engineering, model training, and cloud deployment Using Python and Flask
